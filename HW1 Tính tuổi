@@ -1,0 +1,11 @@
+#include <stdio.h>
+// IT Club PTIT Hanoi
+
+int main() {
+	// Your code goes here
+	int namsinh, tuoi;
+    scanf("%d", &namsinh);
+    tuoi = 2021 - namsinh;
+    printf("%d", tuoi);
+	return 0;
+}
