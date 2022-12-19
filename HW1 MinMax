@@ -1,0 +1,14 @@
+#include <stdio.h>
+// IT Club PTIT Hanoi
+#include <math.h>
+int main() {
+	// Your code goes here
+	int a, b, c, result1, result2, max, min;
+    scanf("%d %d %d", &a, &b, &c);
+    result1 = (a + b + abs(a - b)) / 2;
+    max = (result1 + c + abs(result1 - c)) / 2;
+    result2 = (a + b - abs(a - b)) / 2;
+    min = (result2 + c - abs(result2 - c)) / 2;
+    printf("%d %d", max, min);
+	return 0;
+}
