@@ -1,0 +1,16 @@
+#include <stdio.h>
+// IT Club PTIT Hanoi
+
+int main() {
+	// Your code goes here
+	int a, N, S1, S2;
+    scanf("%d %d", &a, &N);
+    S1 = (a * (a + 1)) / 2;
+    S2 = S1 % N;
+    if (S2 % N == 0) {
+        printf("1");
+    } else {
+        printf("0");
+    }
+	return 0;
+}
