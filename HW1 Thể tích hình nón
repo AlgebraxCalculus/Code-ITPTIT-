@@ -1,0 +1,12 @@
+#include <stdio.h>
+// IT Club PTIT Hanoi
+
+int main() {
+	// Your code goes here
+	long long h, r;
+    scanf("%lld %lld", &h, &r);
+    double thetich;
+    thetich = (h * r * r * 3.14) / 3;
+    printf("%0.3lf", thetich);
+	return 0;
+}
