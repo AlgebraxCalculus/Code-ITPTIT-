@@ -1,0 +1,18 @@
+#include <stdio.h>
+// IT Club PTIT Hanoi
+#include <math.h>
+int main() {
+	// Your code goes here
+	double a, b, result1;
+    scanf("%lf %lf", &a, &b);
+    result1 = (a / b) * pow(10, 5);
+    int c = (int) (result1);
+    int result2 = c % 10;
+    int result3 = (c / 10) % 10;
+    int result4 = (c / 100) % 10;
+    int result5 = (c / 1000) % 10;
+    int result6 = (c / 10000) % 10;
+    int sum = result2 + result3 + result4 + result5 + result6;
+    printf("%d", sum);
+	return 0;
+}
