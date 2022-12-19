@@ -1,0 +1,13 @@
+#include <stdio.h>
+// IT Club PTIT Hanoi
+
+int main() {
+	// Your code goes here
+	int a = 1;
+    long long n, sosohang, tong;
+    scanf("%lld", &n);
+    sosohang = (n - a) / 2 + 1;
+    tong = (n + a) * sosohang / 2;
+    printf("%lld", tong);
+	return 0;
+}
