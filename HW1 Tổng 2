@@ -1,0 +1,11 @@
+#include <stdio.h>
+// IT Club PTIT Hanoi
+
+int main() {
+	// Your code goes here
+	long long n, tong;
+    scanf("%lld", &n);
+    tong = (n * (n + 1) * (2 * n + 1)) / 6;
+    printf("%lld", tong);
+	return 0;
+}
