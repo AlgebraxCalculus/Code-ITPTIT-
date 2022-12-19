@@ -1,0 +1,15 @@
+#include <stdio.h>
+// IT Club PTIT Hanoi
+
+int main() {
+	// Your code goes here
+	long long a, b, v, songay;
+    scanf("%lld %lld %lld", &a, &b, &v);
+    if ((v - b) % (a - b) == 0) {
+        songay = (v - b) / (a - b);
+    } else {
+        songay = ((v - b) / (a - b)) + 1;
+    }
+    printf("%lld", songay);
+	return 0;
+}
