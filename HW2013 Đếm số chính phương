@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <math.h>
+int main() {
+	int t;
+	scanf("%d", &t);
+	while (t--) {
+		long long a, b;
+		scanf("%lld %lld", &a, &b);
+		int count = 0;
+		for (int i = a; i <= b; i++) {
+			int can = sqrt(i);
+			if (can * can == i) {
+				count++;
+			}
+
+		}
+		printf("%d", count);
+		printf("\n");
+	}
+	return 0;
+}
