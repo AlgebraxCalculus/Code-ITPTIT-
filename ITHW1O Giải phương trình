@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <math.h>
+int main() {
+    int a, b, c, x1, x2;
+    scanf("%d %d %d", &a, &b, &c);
+    double nghiem1, nghiem2;
+    double delta = b * b - 4 * a * c;
+    if (delta > 0) {
+        nghiem1 = (-b + sqrt(delta)) / (2 * a);
+        nghiem2 = (-b - sqrt(delta)) / (2 * a);
+        x1 = (int) (nghiem1);
+        x2 = (int) (nghiem2);
+        if (nghiem1 > nghiem2) {
+            printf("%d\n%d", x1, x2);
+        } else if (nghiem2 > nghiem1) {
+            printf("%d\n%d", x2, x1);
+        }
+    } else if (delta == 0) {
+        nghiem1 = nghiem2 = (-b / (2 * a));
+        x1 = (int) (nghiem1);
+        printf("%d", x1);
+    } else {
+        printf("null");
+    }
+    return 0;
+}
