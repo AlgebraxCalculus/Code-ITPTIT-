@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main() {
+    int n, m;
+    scanf("%d %d", &n, &m);
+    long long a[500][500] = {};
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            scanf("%lld", &a[i][j]);
+        }
+    }
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            a[i][m] += a[i][j];
+            a[n][j] += a[i][j];
+        }
+    }
+    for (int i = 0; i <= n; i++) {
+        for (int j = 0; j <= m; j++) {
+            if (i == n && j == m) {
+                printf("");
+            } else if (j == m) {
+                printf("%lld", a[i][j]);
+            }
+            else {
+                printf("%lld ", a[i][j]);
+            }
+        }
+        printf("\n");
+    }
+    return 0;
+}
