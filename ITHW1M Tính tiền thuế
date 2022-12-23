@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+    int luong;
+    double thue;
+    scanf("%d", &luong);
+    if (luong >= 20) {
+        thue = luong * 0.05;
+    } else if (luong >= 10 && luong < 20) {
+        thue = luong * 0.03;
+    } else {
+        thue = luong * 0.01;
+    }
+    int t = (int) (thue * 100);
+    if((t % 10 == 0) && (t / 10 % 10 == 0)){
+        printf("%0.0lf", thue);
+    } else if((t % 10 == 0) && (t / 10 % 10 != 0)){
+        printf("%0.1lf", thue);
+    } else{
+        printf("%0.2lf", thue);
+    }
+    return 0;
+}
