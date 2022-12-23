@@ -1,0 +1,19 @@
+#include <stdio.h>
+// IT Club PTIT Hanoi
+
+int main() {
+	// Your code goes here
+	long long phut, cuoc;
+    scanf("%lld", &phut);
+    if (phut <= 50) {
+        cuoc = 600 * phut;
+        printf("%lld", cuoc);
+    } else if (phut <= 150) {
+        cuoc = 600 * 50 + (phut - 50) * 400;
+        printf("%lld", cuoc);
+    } else {
+        cuoc = (phut - 150) * 200 + 100 * 400 + 50 * 600;
+        printf("%lld", cuoc);
+    }
+	return 0;
+}
