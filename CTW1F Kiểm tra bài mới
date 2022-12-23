@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+    long long a, b;
+    scanf("%lld %lld", &a, &b);
+    if (a > b) {
+        long long c = (b - 1) / 6, d = (b - 1) / 8, e = (b - 1) / 10, f = (b - 1) / 24, g = (b - 1) / 30, i = (b - 1) / 40, j = (b - 1) / 120;
+        long long k = a / 6, l = a / 8, m = a / 10, n = a / 24, o = a / 30, p = a / 40, q = a / 120;
+        long long count1 = c + d + e - f - g - i + j;
+        long long count2 = k + l + m - n - o - p + q;
+        long long count3 = count2 - count1;
+        printf("%lld", count3);
+    } else if (a < b) {
+        long long c = (a - 1) / 6, d = (a - 1) / 8, e = (a - 1) / 10, f = (a - 1) / 24, g = (a - 1) / 30, i = (a - 1) / 40, j = (a - 1) / 120;
+        long long k = b / 6, l = b / 8, m = b / 10, n = b / 24, o = b / 30, p = b / 40, q = b / 120;
+        long long count1 = c + d + e - f - g - i + j;
+        long long count2 = k + l + m - n - o - p + q;
+        long long count3 = count2 - count1;
+        printf("%lld", count3);
+    }
+    return 0;
+}
