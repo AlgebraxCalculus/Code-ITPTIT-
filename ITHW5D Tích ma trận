@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+int main() {
+    long long n;
+    scanf("%d", &n);
+    long long a[n + 5][n + 5];
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            scanf("%lld", &a[i][j]);
+        }
+    }
+    long long b[n + 5][n + 5];
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            scanf("%lld", &b[i][j]);
+        }
+    }
+    long long c[105][105]; 
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            c[i][j] = 0;
+            for (int l = 0; l < n; l++) {
+            c[i][j] += a[i][l] * b[l][j];
+            }
+        }
+    }
+    for (int i = 0; i < n; i++) {
+      for (int j = 0; j < n; j++) {
+        printf("%lld ", c[i][j]);
+      }
+      printf("\n");
+    }
+    return 0;
+}
