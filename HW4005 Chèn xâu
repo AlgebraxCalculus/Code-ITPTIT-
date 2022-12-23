@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+	int t;
+	scanf("%d", &t);
+	while (t--) {
+		char s[1001];
+		scanf("\n");
+		scanf("%s", s);
+		char x;
+		scanf("\n");
+		scanf("%c", &x);
+		int k;
+		scanf("\n");
+		scanf("%d", &k);
+		int n = strlen(s);
+		for (int i = n; i >= k; i--) {
+			s[i] = s[i - 1];
+		}
+		s[k] = x;
+		s[n + 1] = '\0';
+		printf("%s\n", s);
+	}
+	return 0;
+}
