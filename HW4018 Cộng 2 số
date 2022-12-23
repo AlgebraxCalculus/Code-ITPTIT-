@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+void sum (int x, int y, int *z) {
+	*z = x + y;
+	return;
+}
+
+int main() {
+	int t; 
+	scanf("%d", &t);
+	while (t--) {
+		scanf("\n");
+		int a, b, tong;
+		scanf("%d %d", &a, &b);
+		sum(a, b, &tong);
+		printf("%d\n", tong);
+	}
+	return 0;
+}
