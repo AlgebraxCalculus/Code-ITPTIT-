@@ -1,0 +1,8 @@
+#include <stdio.h>
+int main (){
+	int m, n;
+	scanf("%d %d", &m, &n);
+	int h = (m + 1) * n + (n + 1) * m;
+	printf ("%d", h);
+    return 0;
+}
