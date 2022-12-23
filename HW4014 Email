@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    int t; 
+    scanf("%d", &t);
+    while (t--) {
+        scanf("\n"); 
+        char xau[1001];
+        gets(xau);
+        for (int i = 0; i < strlen(xau); i++) {
+        	if (xau[i] >= 'A' && xau[i] <= 'Z') {
+            	xau[i] += 32;
+        	}
+    	}
+        int vitri;
+        for (int i = strlen(xau) - 1; i >= 0; i--) {
+            if (xau[i - 1] == ' ') {
+               vitri = i;
+               break;
+            }
+        }
+        for (int i = vitri; i < strlen(xau); i++) {
+            printf("%c", xau[i]);
+        }
+        for (int i = 0; i < vitri - 1; i++) {
+            if (i == 0 || xau[i - 1] == ' ') {
+                printf("%c", xau[i]);
+            }
+        }
+        printf("@itptit.edu.vn\n");
+    }
+    return 0;
+}
