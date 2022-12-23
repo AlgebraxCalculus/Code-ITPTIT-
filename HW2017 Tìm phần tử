@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+int main() {
+    int m;
+    scanf("%d", &m);
+    int arr1[m + 5];
+	for (int i = 0; i < m; i++) {
+        scanf("%d", &arr1[i]);
+    }
+    int n;
+    scanf("%d", &n);
+    int arr2[n + 5];
+    for (int j = 0; j < n; j++) {
+        scanf("%d", &arr2[j]);
+    }
+    int k;
+    int err=0;
+    for (int i = 0; i < m; i++)
+    {
+      for (int j = 0; j < n; j++) {
+        k = 0;
+        if (arr1[i] == arr2[j]){
+          err++;
+          break;
+        } else {
+          k = 1;
+        }
+      }
+      if (k == 1) {
+      printf("%d ", arr1[i]);
+      }
+    }
+    if(err == m){
+      printf("%d", -1);
+    }
+    return 0;
+}
