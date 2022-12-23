@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+int main() {
+    int n;
+    scanf("%d", &n);
+    int a[n + 5];
+	for (int i = 0; i < n; i++) {
+    scanf("%d", &a[i]);
+    }
+    int k; 
+    scanf("%d", &k);
+    int count = n;
+    for (int i = n - 1; i >= 0; i--) {
+    	if (a[i] % k == 0) {
+    		count = i;
+    	}
+    }
+    if (count == n) {
+    	printf("%d", -1);
+    }
+    else {
+    int t = 0;
+    for (int i = 0; i < n; i++) {
+    	if (i != count) {
+    		if (t == 0) {
+    			t++;
+    		} else {
+    			printf(" ");
+    		}
+    	printf("%d", a[i]);
+    	}
+    }
+    }
+    return 0;
+}
