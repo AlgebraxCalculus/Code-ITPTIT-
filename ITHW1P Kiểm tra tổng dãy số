@@ -1,0 +1,26 @@
+#include <stdio.h>
+// IT Club PTIT Hanoi
+
+int main() {
+	// Your code goes here
+	long long a, sosohang, sum;
+    scanf("%lld", &a);
+    if (a % 2 == 0) {
+        sosohang = (a - 2) / 2 + 1;
+        sum = (a + 2) * sosohang / 2;
+        if (sum % 2 == 0) {
+            printf("0");
+        } else {
+            printf("1");
+        }
+    } else {
+        sosohang = (a - 1) / 2 + 1;
+        sum = (a + 1) * sosohang / 2;
+        if (sum % 2 == 0) {
+            printf("0");
+        } else {
+            printf("1");
+        }
+    }
+	return 0;
+}
