@@ -1,0 +1,15 @@
+#include <stdio.h>
+// IT Club PTIT Hanoi
+
+int main() {
+	// Your code goes here
+    int f;
+    scanf("%d", &f);
+    double c = (f - 32)/ 1.8;
+    if (c == (int) (c)) {
+        printf("%0.0lf", c);
+    } else {
+        printf("%0.2lf", c);
+    }
+	return 0;
+}
