@@ -1,0 +1,50 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    int n;
+    scanf("%d", &n);
+    int a[1001];
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &a[i]);
+    }
+// chuyen chu so thanh chu cai
+    char s[1001];
+    for (int i = 0; i < n; i++) {
+        s[i]= (char) a[i];
+    }
+// chuyen chu hoa thanh chu thuong
+    for (int i = 0; i < n; i++) {
+        if (s[i] >= 'A' && s[i] <= 'Z') {
+            s[i] += 32;
+        }
+    }
+// chuyen chu dau thanh chu hoa
+    for (int i = 0; i < n; i++) {
+        if (s[i] >= 'a' && s[i] <= 'z') {
+            s[i] -= 32;
+            break;
+        }
+    }
+// chuyen chu hoa thanh chu thuong
+    for (int i = n - 1; i >= 0; i--) {
+        if (s[i] >= 'a' && s[i] <= 'z') {
+            s[i] -= 32;
+            break;
+        }
+    }
+    char words[1000][1000];
+    char *token = strtok(s, " ");
+    int count = 0;
+    while (token != NULL) {
+        strcpy(words[count++], token);
+        token = strtok(NULL, " ");
+    }
+    for (int i = 0; i < count; i++) {
+        printf("%s", words[i]);
+        if (i != count - 1) {
+            printf(" ");
+        }
+    }
+    return 0;
+}
