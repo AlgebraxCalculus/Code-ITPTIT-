@@ -1,0 +1,43 @@
+#include <stdio.h>
+
+long long isPrime (long long n) {
+    if (n <= 1) {
+        return 0;
+    } 
+    for (int i = 2; i * i <= n; i++) {
+        if (n % i == 0) {
+            return 0;
+        }
+    }
+    return 1;
+}
+
+int main() {
+    long long n;
+    scanf("%lld", &n);
+    // a^8 - a phải là số nguyên tố
+    long long a[6] = {256, 6561, 390625, 5764801, 214358881, 815730721};
+    int count = 0;
+    for (int i = 0; i < 6; i++) {
+        if (a[i] <= n) {
+            count++;
+        }
+    }
+    // a1^2 * a2^2
+    // i = a1 - nguyên tố
+    // j = a2 - nguyên tố
+    int count1 = 0;
+    for (int i = 2; i * i <= n; i++) {
+        if (isPrime(i) == 1) { 
+            for (int j = 2; j * j <= n / (i * i); j++) {
+                if (isPrime(j) == 1) {
+                    if (i != j) {
+                        count1++;
+                    }
+                }
+            }
+        }
+    }
+    printf("%d", count + (count1 / 2));
+    return 0;
+}
