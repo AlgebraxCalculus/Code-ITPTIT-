@@ -1,6 +1,6 @@
 # ITPTIT LẬP TRÌNH TỪ TRÁI TIM
 ![image](https://user-images.githubusercontent.com/121043282/208472155-386aab42-9dd7-4735-a813-387d61dbee1b.png)
-# SẮP BỊ OUT RỒI NÊN ĐÂY SẼ MÃI LÀ KỈ NIỆM
+# KHÔNG NGỜ LẠI TRỞ THÀNH THÀNH VIÊN CHÍNH THỨC NÊN ĐÂY SẼ MÃI LÀ KỈ NIỆM
 # AC MUÔN NĂM AC MUÔN NĂM
 ![image](https://user-images.githubusercontent.com/121043282/208471665-cd441ddf-e84e-4824-8a85-b94035029e8b.png)
 ![image](https://user-images.githubusercontent.com/121043282/208471672-b5cab532-6d77-4514-8142-488314c029d3.png)
