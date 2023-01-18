@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    int t;
+    scanf("%d", &t);
+    while (t--) {
+        char s[1005];
+        scanf("%s", s);
+        for (int i = 0; i < strlen(s); i++) {
+            int count = 1;
+            while (s[i] == s[i + 1]) {
+                count++;
+                i++;
+            }
+            if (count > 1) {
+                printf("%c%d", s[i], count);
+            } else {
+                printf("%c", s[i]);
+            }
+        }
+        printf("\n");
+    }
+    return 0;
+}
