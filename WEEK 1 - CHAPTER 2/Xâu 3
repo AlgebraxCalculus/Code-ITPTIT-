@@ -1,0 +1,35 @@
+//Cho 1 mảng a gồm N số nguyên dương. Sắp xếp mảng theo thứ tự tăng dần.
+#include <bits/stdc++.h>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+bool cmp (string a, string b) {
+    if (a.size() == b.size()) {
+        return a < b;
+    } else {
+        return a.size() < b.size();
+    }
+}
+
+int main() {
+	ios_base::sync_with_stdio(false);	
+	cin.tie(0);
+    int t;
+    cin >> t;
+    while (t--) {
+        int n;
+        cin >> n;
+        vector<string> v(n);
+        for (int i = 0; i < n; i++) {
+        	cin >> v[i];
+		}
+        sort(v.begin(), v.end(), cmp);
+        for (auto x : v) {
+            cout << x << ' ';
+        }
+        cout << endl;
+    }
+    return 0;
+}
