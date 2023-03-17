@@ -1,0 +1,37 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main() {
+	ios_base::sync_with_stdio(0); 
+	cin.tie(0); 
+	cout.tie(0);
+	int t;
+	cin >> t;
+	while (t--) {
+		int n;
+		cin >> n;
+		int a[n + 5];
+		vector<int> v1;
+		vector<int> v2;
+		for (int i = 0; i < n; i++) {
+			if (i % 2 == 0) {
+				cin >> a[i];
+				v1.push_back(a[i]);
+			} else {
+				cin >> a[i];
+				v2.push_back(a[i]);
+			}
+	 	}
+	 	for (int i = 0; i < n / 2; i++) {
+	 		cout << v2[i] << ' ' << v1[i] << ' ';
+		}
+		if (v1.size() > (n / 2)) {
+			cout << *v1.rbegin();
+		} else if (v2.size() > (n / 2)) {
+			cout << *v2.rbegin();
+		}
+		cout << endl;
+	}
+	return 0;
+}
