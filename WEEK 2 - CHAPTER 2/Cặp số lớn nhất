@@ -1,0 +1,28 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int maxXOR(int l, int r) {
+	int _xor = l xor r;
+	int dem = 0;
+	while (_xor)
+	{
+		dem++;
+		_xor >>= 1;
+	}
+	return (1 << dem) - 1;
+}
+
+int main() {
+	int t;
+	cin >> t;
+	while (t--) {
+		int x, y;
+		cin >> x >> y;
+		if (x < y) {
+			swap(x, y);
+		}
+		cout << maxXOR(x, y) << endl;
+	}
+	return 0;
+}
