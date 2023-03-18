@@ -1,3 +1,4 @@
+//Cách 1:
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -21,6 +22,48 @@ int main() {
 			}
 		}
 		cout << max_num << endl;
+	}
+	return 0;
+}
+//Cách 2: Sử dụng 2 con trỏ
+#include <bits/stdc++.h>
+
+using namespace std;
+
+bool cmp(string a, string b)
+{
+    if (a.size() != b.size())
+        return a.size() < b.size();
+
+    return a < b;
+}
+
+int main() {
+	int t;
+	cin >> t;
+	while (t--) {
+		string s;
+        cin >> s;
+        auto it = s.begin(), its = s.begin();
+        string ans = "";
+        while (it < s.end())
+        {
+            while (it < s.end() and !isdigit(*it))
+            {
+                it++;
+            }
+            its = it;
+            while (its < s.end() and isdigit(*its))
+            {
+                its++;
+            }
+
+            string num = string(it, its);
+            if (cmp(ans, num))
+                ans = num;
+            it = its + 1;
+        }
+        cout << ans << endl;
 	}
 	return 0;
 }
