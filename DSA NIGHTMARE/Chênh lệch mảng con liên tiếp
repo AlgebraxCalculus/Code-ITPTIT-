@@ -1,0 +1,34 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int longest_subarray (vector<int> &v, int n) {
+	multiset<int> ms;
+	int j = 0, ans = 1;
+	for (int i = 0; i < v.size(); i++) {
+		ms.insert(v[i]);
+		while (!ms.empty() && *ms.rbegin() - *ms.begin() > n) {
+			ms.erase(ms.find(v[j++]));
+		}
+		ans = max(ans, i - j + 1);
+	}
+	return ans;
+}
+
+int main() {
+	ios_base::sync_with_stdio(0);
+	cin.tie(0);
+	cout.tie(0);
+	int t;
+	cin >> t;
+	while (t--) {
+		int n, limit;
+		cin >> n >> limit;
+		vector<int> v(n);
+		for (int i = 0; i < n; i++) {
+			cin >> v[i];
+		}
+		cout << longest_subarray(v, limit) << endl;
+	}
+	return 0;
+}
