@@ -1,0 +1,40 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main() {
+	ios_base::sync_with_stdio(0);
+	cin.tie(0);
+	cout.tie(0);
+	int n, m;
+	cin >> n;
+	map<int, int> mp1;
+	for (int i = 0; i < n; i++) {
+		int x, y;
+		cin >> x >> y;
+		mp1[x] += y;
+	}
+	cin >> m;
+	map<int, int> mp2;
+	for (int i = 0; i < m; i++) {
+		int x, y;
+		cin >> x >> y;
+		mp2[x] += y;
+	}
+	map<int, int> res;
+	for (auto it : mp1) {
+		int key = it.first;
+		int value = it.second + mp2[key];
+		res[key] = value;
+	}
+	for (auto it : mp2) {
+		int key = it.first;
+		if (mp1.find(key) == mp1.end()) {
+			res[key] = it.second;
+		}
+	}
+	for (auto it : res) {
+		cout << it.first << ' ' << it.second << endl;
+	}
+	return 0;
+}
