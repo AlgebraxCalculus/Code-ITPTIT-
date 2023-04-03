@@ -1,0 +1,42 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+bool check (string a, string b, int n) {
+	vector<char> A, B;
+	for (int i = 0; i < n; i++) {
+		if (a[i] != b[i]) {
+			A.push_back(a[i]);
+			B.push_back(b[i]);
+		}
+	}
+	if (A.size() == B.size() && B.size() == 0) {
+		return 1;
+	} 
+	if (A.size() == B.size() && B.size() == 2) {
+		if (A[0] == A[1] && B[0] == B[1]) {
+			return 1;
+		}
+	}
+	return 0;
+}
+
+int main() {
+	ios_base::sync_with_stdio(0);
+	cin.tie(0);
+	cout.tie(0);
+	int t;
+	cin >> t;
+	while (t--) {
+		int n;
+		cin >> n;
+		string a, b;
+		cin >> a >> b;
+		if (check(a, b, n)) {
+			cout << "YES" << endl;
+		} else {
+			cout << "NO" << endl;
+		}
+	}
+	return 0;
+}
