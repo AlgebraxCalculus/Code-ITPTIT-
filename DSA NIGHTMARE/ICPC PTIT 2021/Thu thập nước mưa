@@ -1,0 +1,27 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int tongchuso (int n) {
+	int sum = 0;
+	while (n != 0) {
+		sum += (n % 10);
+		n /= 10;
+	}
+	return sum;
+}
+
+int main() {
+	ios_base::sync_with_stdio(0);
+	cin.tie(0);
+	cout.tie(0);
+	int n;
+	cin >> n;
+	int ans1 = n, ans2 = n;
+	for (int i = 1; i <= 6; i++) {
+		ans1 += tongchuso(n);
+		ans2 += ans1;
+	}
+	cout << ans2 << endl;
+	return 0;
+}
